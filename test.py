@@ -18,3 +18,10 @@ class testAreaCirculo(unittest.TestCase):
         self.assertEqual(esperamos,area.resultado())
 
 
+class testAreaCuadrado(unittest.TestCase):
+
+    def test_area_del_cuadrado(self):
+        # El area del cuadrado cuyo valor sea de 4 tendra una area de 16
+        area = calcular_area()
+        area.area_cuadrado(4),self.assertEqual(16,area.resultado())
+        

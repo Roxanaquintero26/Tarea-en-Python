@@ -10,4 +10,8 @@ class calcular_area:
         else:
             self.area = ("El radio debe de ser positivo")
       
-        
+    def area_cuadrado(self,lado):
+        if lado >= 0:
+            self.area = math.pow(lado,2)
+        else:
+            self.area = ("Ingrese un número positivo")
