@@ -25,3 +25,9 @@ class testAreaCuadrado(unittest.TestCase):
         area = calcular_area()
         area.area_cuadrado(4),self.assertEqual(16,area.resultado())
         
+    def test_evalua_parametro_lado(self):
+        # No se puede calcular el area de un cuadrado si se ingresa un numero negativo
+        area = calcular_area()
+        area.area_cuadrado(-7)
+        esperamos = str("Ingrese un número positivo")
+        self.assertEqual(esperamos,area.resultado())
