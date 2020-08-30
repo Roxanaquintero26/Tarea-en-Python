@@ -15,3 +15,10 @@ class calcular_area:
             self.area = math.pow(lado,2)
         else:
             self.area = ("Ingrese un número positivo")
+    
+    def area_rectangulo(self,base,altura):
+        if base >= 0 and altura >= 0:
+            self.area = base * altura
+        else:
+            self.area = ("Ingrese numeros positivos para los parametros de base y altura")
+    

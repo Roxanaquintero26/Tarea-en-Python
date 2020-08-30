@@ -31,3 +31,19 @@ class testAreaCuadrado(unittest.TestCase):
         area.area_cuadrado(-7)
         esperamos = str("Ingrese un número positivo")
         self.assertEqual(esperamos,area.resultado())
+
+class testAreaRectangulo(unittest.TestCase):
+
+    def test_area_del_rectangulo(self):
+        # El area de unrectangulo con base de 4 y una altura de 5 debe de ser de 20
+        area = calcular_area()
+        area.area_rectangulo(4,5)
+        self.assertEqual(20,area.resultado())
+
+    def test_evalua_parametro_base_y_altura(self):
+        # No se puede calcular el area de un rectangulo si se ingresan un numeros negativos
+        area = calcular_area()
+        area.area_rectangulo(-8,7)
+        esperamos = str("Ingrese numeros positivos para los parametros de base y altura")
+        self.assertEqual(esperamos,area.resultado())
+
