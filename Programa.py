@@ -5,6 +5,9 @@ class calcular_area:
         return self.area
 
     def area_circulo(self,radio):
-        self.area = round((math.pi * math.pow(radio,2)),2)
-       
+        if radio >= 0:
+            self.area = round((math.pi * math.pow(radio,2)),2)
+        else:
+            self.area = ("El radio debe de ser positivo")
+      
         
