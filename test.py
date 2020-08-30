@@ -47,3 +47,16 @@ class testAreaRectangulo(unittest.TestCase):
         esperamos = str("Ingrese numeros positivos para los parametros de base y altura")
         self.assertEqual(esperamos,area.resultado())
 
+class testAreaTriangulo(unittest.TestCase):
+    def test_area_del_triangulo(self):
+        # El area de un triangulo con base de 3.5 y 
+        area = calcular_area()
+        area.area_triangulo(8,5)
+        self.assertEqual(20,area.resultado())
+
+    def test_evalua_parametro_base_y_altura_del_triangulo(self):
+        # No se puede calcular el area de un triangulo si se ingresan un numeros negativos
+        area = calcular_area()
+        area.area_triangulo(2,-7)
+        esperamos = str("Ingrese numeros positivos para los parametros de base y altura")
+        self.assertEqual(esperamos,area.resultado())

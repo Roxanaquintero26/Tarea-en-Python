@@ -22,3 +22,8 @@ class calcular_area:
         else:
             self.area = ("Ingrese numeros positivos para los parametros de base y altura")
     
+    def area_triangulo(self,base,altura):
+        if base >= 0 and altura >= 0:
+            self.area = (base * altura)/2
+        else:
+            self.area = ("Ingrese numeros positivos para los parametros de base y altura")
