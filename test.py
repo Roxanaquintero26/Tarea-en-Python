@@ -60,3 +60,21 @@ class testAreaTriangulo(unittest.TestCase):
         area.area_triangulo(2,-7)
         esperamos = str("Ingrese numeros positivos para los parametros de base y altura")
         self.assertEqual(esperamos,area.resultado())
+
+class testAreaElipse(unittest.TestCase):
+    # El area de una elipse con un eje mayor de 3.5 y un eje menor de 4.2 es de 46.18
+    def test_area_del_elipse(self):
+        area = calcular_area()
+        area.area_elipse(3.5,4.2)
+        self.assertEqual(46.18,area.resultado())
+
+    def test_evalua_parametro_base_y_altura_del_triangulo(self):
+        # No se puede calcular el area de un triangulo si se ingresan un numeros negativos
+        area = calcular_area()
+        area.area_elipse(-2,8)
+        esperamos = str("Ingrese numeros positivos para los parametros del eje mayor y el eje menor")
+        self.assertEqual(esperamos,area.resultado())
+
+
+if __name__ == "__main__":
+    unittest.main()
